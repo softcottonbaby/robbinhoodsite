@@ -1,8 +1,5 @@
-/* ============================================
-   ROBBINHOOD - Main Application Logic
-   ============================================ */
 
-// ── Navigation ──────────────────────────────────────────────
+
 function switchView(viewId) {
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('on'));
@@ -34,7 +31,6 @@ function closeMilestoneNotice() {
   modal.classList.add('hidden');
 }
 
-// ── Leaderboard Site Switcher ───────────────────────────────
 let currentLeaderboard = 'hypebet';
 
 function switchLeaderboard(site) {
@@ -68,7 +64,6 @@ function switchLeaderboard(site) {
   }, 300);
 }
 
-// ── Particles Background ────────────────────────────────────
 (function initParticles() {
   const canvas = document.getElementById('particles');
   if (!canvas) return;
@@ -125,7 +120,6 @@ function switchLeaderboard(site) {
   draw();
 })();
 
-// ── Countdown Timer ─────────────────────────────────────────
 let countdownInterval = null;
 
 function startCountdown() {
@@ -147,7 +141,6 @@ function updateCountdown() {
   if (secsEl) secsEl.textContent = String(time.seconds).padStart(2, '0');
 }
 
-// ── Leaderboard Logic ───────────────────────────────────────
 let leaderboardData = [];
 let autoRefreshInterval = null;
 
@@ -285,7 +278,6 @@ function renderTable(players) {
   }).join('');
 }
 
-// ── Milestones Logic ────────────────────────────────────────
 async function loadMilestones() {
   try {
     const apiData = await fetchAffiliateStats();
@@ -343,12 +335,10 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
-// ── Initialize ──────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   switchView('home');
 });
 
-// Handle browser back/forward
 window.addEventListener('popstate', () => {
   const hash = window.location.hash.replace('#', '');
   if (hash === 'leaderboard') {
