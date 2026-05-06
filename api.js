@@ -4,7 +4,7 @@
    ============================================ */
 
 const API_CONFIG = {
-  url: 'http://127.0.0.1:3000/api/stats',
+  url: '/api/stats',
   cooldown: 5 * 60 * 1000, // 5 minutes in ms
   refreshInterval: 60 * 1000, // 60 seconds
 };
