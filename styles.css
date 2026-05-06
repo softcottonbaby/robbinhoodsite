@@ -1,7 +1,4 @@
-/* ============================================
-   ROBBINHOOD - Main Stylesheet
-   Premium Gradient Text Effects Edition
-   ============================================ */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
@@ -43,7 +40,6 @@ body {
   flex-direction: column;
 }
 
-/* ── BACKGROUND ─────────────────────────────────────────────── */
 body::before {
   content:''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
 }
@@ -71,10 +67,8 @@ body::after {
   50% { opacity: 0.9; }
 }
 
-/* ── PARTICLES ──────────────────────────────────────────────── */
 #particles { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
 
-/* ── NAV ────────────────────────────────────────────────────── */
 nav {
   position: sticky; top: 0; z-index: 100;
   display: flex; align-items: center; justify-content: center;
@@ -193,7 +187,6 @@ nav {
   background: linear-gradient(90deg, var(--green), #9ff37a);
 }
 
-/* ── MODAL ──────────────────────────────────────────────────── */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -225,12 +218,10 @@ nav {
   margin-bottom: 24px;
 }
 
-/* ── VIEWS ──────────────────────────────────────────────────── */
 .view { display: none; position: relative; z-index: 1; flex: 1; width: 100%; max-width: 1100px; margin: 0 auto; padding: 40px 24px; animation: fadeIn 0.4s ease; }
 .view.active { display: block; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* ── HOME VIEW ──────────────────────────────────────────────── */
 #home-view.active { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 70vh; }
 
 .home-title {
@@ -322,7 +313,6 @@ nav {
   transform: translateY(-2px);
 }
 
-/* ── MILESTONES VIEW ────────────────────────────────────────── */
 #milestones-view.active { display: block; }
 
 .milestones-hero {
@@ -438,7 +428,6 @@ nav {
 .milestone-current { color: var(--green); }
 .milestone-target { color: var(--t3); }
 
-/* ── LEADERBOARD VIEW ───────────────────────────────────────── */
 .hero {
   text-align: center;
   padding: 20px 0 48px;
@@ -476,7 +465,6 @@ nav {
   animation: gradientFlow 4s linear infinite;
 }
 
-/* Countdown */
 .countdown-wrap {
   display: flex;
   justify-content: center;
@@ -548,12 +536,11 @@ nav {
   color: var(--t3);
 }
 
-/* Podium */
 .pod-wrap {
   max-width: 860px;
   margin: 0 auto 56px;
-  display: flex;              /* <-- Added to force centering */
-  justify-content: center;    /* <-- Added to force centering */
+  display: flex;
+  justify-content: center;
 }
 
 .pod-grid {
@@ -561,7 +548,7 @@ nav {
   grid-template-columns: 1fr 1.12fr 1fr;
   gap: 16px;
   align-items: end;
-  width: 100%;                /* <-- Added to keep spacing even */
+  width: 100%;
 }
 
 .pod-card {
@@ -717,7 +704,6 @@ nav {
   animation: gradientFlow 4s linear infinite;
 }
 
-/* Table */
 .tbl-section { margin-bottom: 40px; }
 
 .tbl-wrap {
@@ -799,7 +785,6 @@ nav {
   animation: gradientFlow 4s linear infinite;
 }
 
-/* Loading */
 .loading-wrap { display: flex; justify-content: center; align-items: center; padding: 60px; }
 .spinner {
   width: 36px; height: 36px;
@@ -810,7 +795,6 @@ nav {
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ── FOOTER ─────────────────────────────────────────────────── */
 footer {
   background: rgba(11, 14, 20, 0.7);
   backdrop-filter: blur(24px);
@@ -823,7 +807,6 @@ footer {
   margin-top: auto;
 }
 
-/* ── RESPONSIVE ─────────────────────────────────────────────── */
 @media(max-width:768px){
   .pod-grid { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
   .pod-card.p1 { order: -1; transform: scale(1); }
@@ -856,9 +839,6 @@ footer {
   }
 }
 
-/* ── REDUCED MOTION ─────────────────────────────────────────── */
-
-/* ── REDUCED MOTION ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .home-title,
   .home-subtitle,
@@ -896,7 +876,6 @@ footer {
   .milestone-title { color: var(--t1); }
 }
 
-/* ── LOADING SCREEN ─────────────────────────────────────────── */
 #loading-screen {
   position: fixed;
   inset: 0;
@@ -978,7 +957,6 @@ footer {
   50%       { opacity: 1; }
 }
 
-/* ── LEADERBOARD SITE SELECTOR ───────────────────────────── */
 .lb-selector-panel {
   max-width: 400px;
   margin: 0 auto 20px auto;
@@ -1091,7 +1069,6 @@ footer {
   line-height: 1;
 }
 
-/* Active indicator dot */
 .lb-site-btn.active::after {
   content: '';
   position: absolute;
@@ -1104,7 +1081,6 @@ footer {
   background: var(--green);
   box-shadow: 0 0 6px rgba(103, 213, 35, 0.5);
 }
-/* ── WARNING PANEL ───────────────────────────────────────── */
 
 .warning-panel {
   background: rgba(255, 60, 60, 0.1);
@@ -1161,7 +1137,7 @@ footer {
 #warn-details.hidden {
   display: none;
 }
-/* ── MILESTONE SECTIONS ───────────────────────────────────── */
+
 .milestone-section {
   margin-bottom: 48px;
 }
@@ -1209,7 +1185,6 @@ footer {
   font-weight: 700;
 }
 
-/* ── MILESTONE PANELS ─────────────────────────────────────── */
 .milestone-panel {
   background: rgba(17, 22, 33, 0.7);
   backdrop-filter: blur(12px);
@@ -1244,7 +1219,6 @@ footer {
   left: 100%;
 }
 
-/* Brand logo on panel */
 .milestone-panel-brand {
   width: 56px;
   height: 56px;
@@ -1279,7 +1253,6 @@ footer {
   color: var(--green);
 }
 
-/* Tier name */
 .milestone-panel-tier {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 18px;
@@ -1323,7 +1296,6 @@ footer {
   -webkit-text-fill-color: transparent;
 }
 
-/* XP requirement */
 .milestone-panel-xp {
   font-size: 13px;
   font-weight: 600;
@@ -1332,7 +1304,6 @@ footer {
   letter-spacing: 0.3px;
 }
 
-/* Reward amount */
 .milestone-panel-reward {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 32px;
@@ -1346,7 +1317,6 @@ footer {
   animation: gradientFlow 4s linear infinite;
 }
 
-/* Claim button */
 .btn-claim {
   width: 100%;
   padding: 12px 20px;
@@ -1375,7 +1345,6 @@ footer {
   transform: translateY(0);
 }
 
-/* ── CLAIM MODAL ──────────────────────────────────────────── */
 .claim-modal-card {
   width: min(480px, calc(100% - 40px));
   background: rgba(17, 22, 33, 0.98);
@@ -1521,7 +1490,6 @@ footer {
   box-shadow: 0 0 30px rgba(103,213,35,0.5);
 }
 
-/* ── RESPONSIVE MILESTONES ───────────────────────────────── */
 @media(max-width:768px){
   .milestone-panel {
     padding: 22px 18px 18px;
@@ -1551,7 +1519,6 @@ footer {
   }
 }
 
-/* Reduced motion for milestone panels */
 @media (prefers-reduced-motion: reduce) {
   .milestone-panel:hover {
     transform: none;
@@ -1574,7 +1541,6 @@ footer {
   }
 }
 
-/* ── MILESTONE SECTIONS ───────────────────────────────────── */
 .milestone-section {
   margin-bottom: 56px;
 }
@@ -1639,7 +1605,6 @@ footer {
   font-weight: 700;
 }
 
-/* ── MILESTONE PANELS ─────────────────────────────────────── */
 .milestone-panel {
   background: rgba(17, 22, 33, 0.7);
   backdrop-filter: blur(12px);
@@ -1674,7 +1639,6 @@ footer {
   left: 100%;
 }
 
-/* Brand logo on panel */
 .milestone-panel-brand {
   width: 60px;
   height: 60px;
@@ -1709,7 +1673,6 @@ footer {
   color: var(--green);
 }
 
-/* Tier name */
 .milestone-panel-tier {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 20px;
@@ -1753,7 +1716,6 @@ footer {
   -webkit-text-fill-color: transparent;
 }
 
-/* Panel details - WAGERED REQUIREMENT & REWARD */
 .milestone-panel-details {
   width: 100%;
   background: rgba(255,255,255,0.02);
@@ -1802,7 +1764,6 @@ footer {
   margin: 2px 0;
 }
 
-/* Claim button */
 .btn-claim {
   width: 100%;
   padding: 12px 20px;
@@ -1831,7 +1792,6 @@ footer {
   transform: translateY(0);
 }
 
-/* ── CLAIM MODAL ──────────────────────────────────────────── */
 .claim-modal-card {
   width: min(480px, calc(100% - 40px));
   background: rgba(17, 22, 33, 0.98);
@@ -1977,7 +1937,6 @@ footer {
   box-shadow: 0 0 30px rgba(103,213,35,0.5);
 }
 
-/* ── RESPONSIVE MILESTONES ───────────────────────────────── */
 @media(max-width:768px){
   .milestone-section {
     margin-bottom: 40px;
@@ -2016,7 +1975,6 @@ footer {
   }
 }
 
-/* Reduced motion for milestone panels */
 @media (prefers-reduced-motion: reduce) {
   .milestone-panel:hover {
     transform: none;

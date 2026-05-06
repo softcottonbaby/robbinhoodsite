@@ -1,15 +1,11 @@
-/* ============================================
-   ROBBINHOOD - API Module
-   Frontend calling the secure backend proxy
-   ============================================ */
+
 
 const API_CONFIG = {
   url: '/api/stats',
-  cooldown: 5 * 60 * 1000, // 5 minutes in ms
-  refreshInterval: 60 * 1000, // 60 seconds
+  cooldown: 5 * 60 * 1000,
+  refreshInterval: 60 * 1000,
 };
 
-// Prize distribution for leaderboard
 const PRIZES = {
   1: 750, 2: 300, 3: 180, 4: 120, 5: 80,
   6: 70,
@@ -42,7 +38,7 @@ async function fetchAffiliateStats() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        // NO API KEY HERE! The proxy adds it.
+
         from: from,
         to: to,
       }),

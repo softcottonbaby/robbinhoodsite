@@ -11,10 +11,10 @@
 <base target="_blank">
 <base target="_blank">
 <base target="_blank">
+<base target="_blank">
 </head>
 <body>
 
-<!-- ── LOADING SCREEN ───────────────────────────────────────── -->
 <div id="loading-screen">
   <div class="loader-logo">
     <img src="logorobbin.png" alt="R" onerror="this.style.display='none'">
@@ -25,13 +25,11 @@
   <span class="loader-text">Loading</span>
 </div>
 
-<!-- Background Effects -->
 <div class="glow-orb g1"></div>
 <div class="glow-orb g2"></div>
 <div class="glow-orb g3"></div>
 <canvas id="particles"></canvas>
 
-<!-- Navigation -->
 <nav>
   <a class="brand" onclick="switchView('home')">
     <div class="brand-icon">
@@ -46,7 +44,6 @@
   </ul>
 </nav>
 
-<!-- HOME VIEW -->
 <div id="home-view" class="view active">
   <div class="home-title">
     <img src="homepagetext.png" alt="ROBBINHOOD" class="home-title-img">
@@ -58,13 +55,12 @@
   </div>
 </div>
 
-<!-- LEADERBOARD VIEW -->
 <div id="leaderboard-view" class="view">
   <section class="hero">
     <h1><span class="white">$1,500 </span><span class="green-grad">Bi-Weekly Leaderboard</span></h1>
   </section>
 
-  <!-- LEADERBOARD SITE SELECTOR -->
+  
   <div class="lb-selector-panel">
     <div class="lb-selector-label">Select Leaderboard</div>
     <div class="lb-selector-logos">
@@ -75,17 +71,12 @@
         </div>
         <div class="lb-site-glow"></div>
       </button>
-      <!-- Add more leaderboard sites here in the future -->
-      <!--
-      <button class="lb-site-btn" data-site="other" onclick="switchLeaderboard('other')" title="Other Site">
-        <img src="other-logo.webp" alt="Other" class="lb-site-logo">
-        <div class="lb-site-glow"></div>
-      </button>
-      -->
+      
+      
     </div>
   </div>
 
-  <!-- WARNING PANEL -->
+  
   <div class="warning-panel">
     <span>WAGER ABUSING WILL DISQUALIFY YOU FROM ANY REWARDS</span>
     <div class="warning-help" onclick="document.getElementById('warn-details').classList.toggle('hidden')">?</div>
@@ -94,7 +85,7 @@
     </div>
   </div>
 
-  <!-- Podium -->
+  
   <div class="pod-wrap">
     <div class="pod-grid" id="podium">
       <div class="pod-card p2">
@@ -145,7 +136,7 @@
     </div>
   </div>
 
-  <!-- Countdown Timer -->
+  
   <div class="countdown-wrap">
     <div class="countdown-item">
       <span class="num" id="cd-days">00</span>
@@ -165,7 +156,7 @@
     </div>
   </div>
 
-  <!-- Leaderboard Table -->
+  
   <section class="tbl-section">
     <div class="tbl-wrap">
       <div class="tbl-head">
@@ -183,14 +174,13 @@
   </section>
 </div>
 
-<!-- MILESTONES VIEW -->
 <div id="milestones-view" class="view">
   <section class="milestones-hero">
     <h1>Community Milestones</h1>
     <p class="milestones-subtitle">Complete milestones on <span class="hypebet-brand">HypeBet</span> and claim your rewards</p>
   </section>
 
-  <!-- LEVEL UP BONUSES SECTION -->
+  
   <div class="milestone-section">
     <div class="milestone-section-header">
       <div class="milestone-section-badge">
@@ -312,7 +302,7 @@
     </div>
   </div>
 
-  <!-- XP WAGER MILESTONES SECTION -->
+  
   <div class="milestone-section">
     <div class="milestone-section-header">
       <div class="milestone-section-badge">
@@ -478,7 +468,7 @@
     </div>
   </div>
 </div>
-<!-- CLAIM MODAL -->
+
 <div id="claim-modal" class="modal-overlay hidden">
   <div class="modal-card claim-modal-card">
     <div class="claim-modal-header">
@@ -509,18 +499,13 @@
   </div>
 </div>
 
-<!-- Footer -->
 <footer>
   &copy; 2025 Robbinhood &middot; Gamble responsibly &middot; 18+
 </footer>
 
-<!-- Scripts -->
 <script src="api.js"></script>
 <script src="app.js"></script>
 
-
-
-<!-- Claim Modal Logic -->
 <script>
 (function() {
   const DISCORD_LINK = 'https://discord.gg/UxeTANNyan';
@@ -548,7 +533,7 @@
 
     rewardEl.textContent = '$' + parseInt(reward).toLocaleString();
 
-    // Reset button state
+    
     discordBtn.textContent = 'Claim on Discord';
     discordBtn.classList.remove('claimed');
     discordBtn.href = 'javascript:void(0);';
@@ -563,7 +548,7 @@
     btn.classList.add('claimed');
     btn.href = DISCORD_LINK;
     btn.onclick = null;
-    // Small delay to let user see the text change before redirect
+    
     setTimeout(function() {
       window.open(DISCORD_LINK, '_blank');
     }, 200);
@@ -576,7 +561,7 @@
     currentClaimBtn = null;
   };
 
-  // Close on overlay click
+  
   document.addEventListener('click', function(e) {
     const modal = document.getElementById('claim-modal');
     if (e.target === modal) {
@@ -584,7 +569,7 @@
     }
   });
 
-  // Close on Escape key
+  
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       closeClaimModal();
@@ -593,7 +578,6 @@
 })();
 </script>
 
-<!-- ── LOADING SCREEN DISMISS ───────────────────────────────── -->
 <script>
   (function () {
     const screen = document.getElementById('loading-screen');
