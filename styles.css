@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
@@ -318,10 +317,6 @@ nav {
   transform: translateY(-2px);
 }
 
-/* ============================================
-   EXCLUSIVE OFFERS SECTION - FIXED WIDTH
-   ============================================ */
-
 .exclusive-offers-section {
   width: 100%;
   max-width: 1200px;
@@ -381,7 +376,6 @@ nav {
   color: var(--t3);
 }
 
-/* HORIZONTAL RECTANGULAR PANEL */
 .exclusive-panel {
   display: flex;
   align-items: center;
@@ -430,7 +424,6 @@ nav {
   box-shadow: 0 0 60px rgba(103,213,35,0.1), 0 8px 40px rgba(0,0,0,0.4);
 }
 
-/* LEFT: Brand + Rakeboost title */
 .exclusive-panel-left {
   display: flex;
   align-items: center;
@@ -516,7 +509,6 @@ nav {
   white-space: nowrap;
 }
 
-/* CENTER: Perks row */
 .exclusive-panel-perks {
   display: flex;
   gap: 10px;
@@ -557,7 +549,6 @@ nav {
   white-space: nowrap;
 }
 
-/* RIGHT: Action buttons */
 .exclusive-actions {
   display: flex;
   flex-direction: column;
@@ -628,7 +619,6 @@ nav {
   box-shadow: 0 0 16px rgba(88,101,242,0.2);
 }
 
-/* Discord logo icon - SVG inline */
 .discord-icon {
   width: 18px;
   height: 18px;
@@ -639,10 +629,6 @@ nav {
   background-position: center;
   flex-shrink: 0;
 }
-
-/* ============================================
-   MY SOCIAL SECTION
-   ============================================ */
 
 .my-social-section {
   width: 100%;
@@ -738,7 +724,6 @@ nav {
   left: 100%;
 }
 
-/* Social brand colors on hover border glow */
 .social-card.x:hover {
   border-color: rgba(239, 243, 244, 0.3);
   box-shadow: 0 8px 32px rgba(239, 243, 244, 0.08);
@@ -775,31 +760,26 @@ nav {
   flex-shrink: 0;
 }
 
-/* X (Twitter) */
 .social-card.x .social-icon-wrap {
   background: rgba(239, 243, 244, 0.08);
   border: 1px solid rgba(239, 243, 244, 0.15);
 }
 
-/* Instagram */
 .social-card.instagram .social-icon-wrap {
   background: linear-gradient(135deg, rgba(225, 48, 108, 0.1), rgba(245, 96, 64, 0.08));
   border: 1px solid rgba(225, 48, 108, 0.2);
 }
 
-/* Discord */
 .social-card.discord .social-icon-wrap {
   background: rgba(88, 101, 242, 0.1);
   border: 1px solid rgba(88, 101, 242, 0.2);
 }
 
-/* Kick */
 .social-card.kick .social-icon-wrap {
   background: rgba(83, 252, 24, 0.08);
   border: 1px solid rgba(83, 252, 24, 0.2);
 }
 
-/* Hype.bet */
 .social-card.hypebet .social-icon-wrap {
   background: linear-gradient(135deg, rgba(103,213,35,0.15), rgba(103,213,35,0.05));
   border: 1px solid rgba(103,213,35,0.2);
@@ -870,7 +850,6 @@ nav {
   transform: translateX(3px);
 }
 
-/* X button */
 .btn-social.x {
   background: rgba(239, 243, 244, 0.06);
   color: #eff3f4;
@@ -884,7 +863,6 @@ nav {
   transform: translateY(-1px);
 }
 
-/* Instagram button */
 .btn-social.instagram {
   background: rgba(225, 48, 108, 0.06);
   color: #e1306c;
@@ -898,7 +876,6 @@ nav {
   transform: translateY(-1px);
 }
 
-/* Discord button */
 .btn-social.discord {
   background: rgba(88, 101, 242, 0.08);
   color: #a5aeff;
@@ -912,7 +889,6 @@ nav {
   transform: translateY(-1px);
 }
 
-/* Kick button */
 .btn-social.kick {
   background: rgba(83, 252, 24, 0.06);
   color: #53fc18;
@@ -926,7 +902,6 @@ nav {
   transform: translateY(-1px);
 }
 
-/* Hype.bet button */
 .btn-social.hypebet {
   background: rgba(103, 213, 35, 0.08);
   color: var(--green);
@@ -1015,10 +990,6 @@ nav {
     padding: 30px 16px 40px;
   }
 }
-
-/* ============================================
-   END EXCLUSIVE OFFERS + SOCIAL SECTION
-   ============================================ */
 
 #milestones-view.active { display: block; }
 
@@ -2324,14 +2295,8 @@ footer {
 }
 
 
-/* ============================================
-   MOBILE FIXES - IMPROVED RESPONSIVENESS
-   ============================================ */
-
-/* Base mobile improvements */
 @media (max-width: 768px) {
 
-  /* NAV BAR FIXES */
   nav {
     padding: 0 12px;
     height: 60px;
@@ -2363,12 +2328,10 @@ footer {
     white-space: nowrap;
   }
 
-  /* VIEW PADDING FIX */
   .view {
     padding: 20px 12px;
   }
 
-  /* HOME VIEW FIXES */
   #home-view.active {
     min-height: auto;
     padding-top: 30px;
@@ -2393,7 +2356,6 @@ footer {
     font-size: 14px;
   }
 
-  /* EXCLUSIVE OFFERS MOBILE */
   .exclusive-offers-section {
     padding: 40px 12px 20px;
   }
@@ -2442,7 +2404,6 @@ footer {
     flex-direction: column;
   }
 
-  /* SOCIAL GRID MOBILE */
   .my-social-section {
     padding: 30px 12px 40px;
   }
@@ -2470,7 +2431,6 @@ footer {
     font-size: 10px;
   }
 
-  /* LEADERBOARD FIXES - MAIN ISSUE */
   .hero {
     padding: 10px 0 30px;
   }
@@ -2480,7 +2440,6 @@ footer {
     padding: 0 8px;
   }
 
-  /* Countdown mobile */
   .countdown-wrap {
     padding: 14px 16px;
     max-width: 100%;
@@ -2500,7 +2459,6 @@ footer {
     letter-spacing: 1px;
   }
 
-  /* PODIUM MOBILE */
   .pod-wrap {
     margin-bottom: 40px;
     padding: 0 12px;
@@ -2526,7 +2484,6 @@ footer {
     transform: translateY(-5px);
   }
 
-  /* TABLE FIX - HORIZONTAL SCROLL */
   .tbl-section {
     margin: 0 12px 30px;
     overflow-x: auto;
@@ -2535,7 +2492,7 @@ footer {
   }
 
   .tbl-wrap {
-    min-width: 500px; /* Force minimum width for scroll */
+    min-width: 500px; 
     border-radius: 16px;
   }
 
@@ -2563,19 +2520,16 @@ footer {
     height: 28px;
   }
 
-  /* Warning panel mobile */
   .warning-panel {
     margin: 0 12px 30px;
     font-size: 11px;
     padding: 10px 14px;
   }
 
-  /* Leaderboard selector mobile */
   .lb-selector-panel {
     margin: 0 12px 16px;
   }
 
-  /* MILESTONES MOBILE */
   .milestones-hero {
     padding: 10px 0 30px;
   }
@@ -2603,7 +2557,6 @@ footer {
     padding: 22px 18px 18px;
   }
 
-  /* Modal mobile */
   .claim-modal-card {
     width: calc(100% - 24px);
     margin: 0 12px;
@@ -2626,14 +2579,12 @@ footer {
     flex-direction: column;
   }
 
-  /* Footer */
   footer {
     padding: 16px 20px;
     font-size: 11px;
   }
 }
 
-/* Extra small screens */
 @media (max-width: 380px) {
   .nav-links a {
     padding: 6px 8px;
@@ -2669,7 +2620,6 @@ footer {
   }
 }
 
-/* Tablet adjustments */
 @media (min-width: 769px) and (max-width: 1024px) {
   .social-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -2685,7 +2635,6 @@ footer {
   }
 }
 
-/* Smooth scrolling for table overflow */
 .tbl-section::-webkit-scrollbar {
   height: 4px;
 }
