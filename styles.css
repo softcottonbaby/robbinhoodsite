@@ -2322,3 +2322,380 @@ footer {
     color: var(--t1);
   }
 }
+
+
+/* ============================================
+   MOBILE FIXES - IMPROVED RESPONSIVENESS
+   ============================================ */
+
+/* Base mobile improvements */
+@media (max-width: 768px) {
+
+  /* NAV BAR FIXES */
+  nav {
+    padding: 0 12px;
+    height: 60px;
+    justify-content: space-between;
+  }
+
+  .brand {
+    position: static;
+    left: auto;
+    margin-right: 8px;
+  }
+
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-links {
+    gap: 2px;
+    margin: 0;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* VIEW PADDING FIX */
+  .view {
+    padding: 20px 12px;
+  }
+
+  /* HOME VIEW FIXES */
+  #home-view.active {
+    min-height: auto;
+    padding-top: 30px;
+  }
+
+  .home-title-img {
+    max-width: 90vw;
+  }
+
+  .home-subtitle {
+    font-size: 14px;
+    padding: 0 16px;
+    margin-bottom: 32px;
+  }
+
+  .home-btns {
+    margin-bottom: 40px;
+  }
+
+  .btn {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+
+  /* EXCLUSIVE OFFERS MOBILE */
+  .exclusive-offers-section {
+    padding: 40px 12px 20px;
+  }
+
+  .exclusive-panel {
+    flex-direction: column;
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  .exclusive-panel-left {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .exclusive-panel-main-title {
+    font-size: 24px;
+    white-space: normal;
+  }
+
+  .exclusive-panel-sub {
+    white-space: normal;
+  }
+
+  .exclusive-panel-perks {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .exclusive-perk {
+    flex: 1 1 calc(33.333% - 8px);
+    min-width: 80px;
+    padding: 10px 8px;
+  }
+
+  .exclusive-perk-name {
+    font-size: 10px;
+    white-space: normal;
+  }
+
+  .exclusive-actions {
+    width: 100%;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  /* SOCIAL GRID MOBILE */
+  .my-social-section {
+    padding: 30px 12px 40px;
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .social-card {
+    padding: 18px 12px;
+  }
+
+  .social-icon-wrap {
+    width: 44px;
+    height: 44px;
+  }
+
+  .social-name {
+    font-size: 13px;
+  }
+
+  .social-handle {
+    font-size: 10px;
+  }
+
+  /* LEADERBOARD FIXES - MAIN ISSUE */
+  .hero {
+    padding: 10px 0 30px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+    padding: 0 8px;
+  }
+
+  /* Countdown mobile */
+  .countdown-wrap {
+    padding: 14px 16px;
+    max-width: 100%;
+    margin: 0 12px 40px;
+  }
+
+  .countdown-item .num {
+    font-size: 28px;
+  }
+
+  .countdown-item:not(:last-child)::after {
+    font-size: 22px;
+  }
+
+  .countdown-item .lbl {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  /* PODIUM MOBILE */
+  .pod-wrap {
+    margin-bottom: 40px;
+    padding: 0 12px;
+  }
+
+  .pod-grid {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+    gap: 12px;
+  }
+
+  .pod-card {
+    padding: 24px 16px 20px;
+  }
+
+  .pod-card.p1 {
+    order: -1;
+    transform: scale(1);
+    padding-top: 32px;
+  }
+
+  .pod-card.p1:hover {
+    transform: translateY(-5px);
+  }
+
+  /* TABLE FIX - HORIZONTAL SCROLL */
+  .tbl-section {
+    margin: 0 12px 30px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 16px;
+  }
+
+  .tbl-wrap {
+    min-width: 500px; /* Force minimum width for scroll */
+    border-radius: 16px;
+  }
+
+  .tbl-head,
+  .tbl-row {
+    grid-template-columns: 60px 1fr 120px 100px;
+    padding: 12px 16px;
+  }
+
+  .th {
+    font-size: 10px;
+  }
+
+  .player-name {
+    font-size: 13px;
+  }
+
+  .wager-amt,
+  .prize-amt {
+    font-size: 13px;
+  }
+
+  .player-avatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Warning panel mobile */
+  .warning-panel {
+    margin: 0 12px 30px;
+    font-size: 11px;
+    padding: 10px 14px;
+  }
+
+  /* Leaderboard selector mobile */
+  .lb-selector-panel {
+    margin: 0 12px 16px;
+  }
+
+  /* MILESTONES MOBILE */
+  .milestones-hero {
+    padding: 10px 0 30px;
+  }
+
+  .milestones-hero h1 {
+    font-size: 24px;
+  }
+
+  .milestones-subtitle {
+    font-size: 13px;
+    padding: 0 16px;
+  }
+
+  .milestone-section {
+    margin-bottom: 40px;
+  }
+
+  .milestones-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 12px;
+  }
+
+  .milestone-panel {
+    padding: 22px 18px 18px;
+  }
+
+  /* Modal mobile */
+  .claim-modal-card {
+    width: calc(100% - 24px);
+    margin: 0 12px;
+  }
+
+  .claim-modal-header {
+    padding: 24px 20px 16px;
+  }
+
+  .claim-modal-body {
+    padding: 20px;
+  }
+
+  .claim-modal-reward {
+    font-size: 36px;
+  }
+
+  .claim-modal-actions {
+    padding: 0 20px 24px;
+    flex-direction: column;
+  }
+
+  /* Footer */
+  footer {
+    padding: 16px 20px;
+    font-size: 11px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 380px) {
+  .nav-links a {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .countdown-item .num {
+    font-size: 24px;
+  }
+
+  .countdown-item .lbl {
+    font-size: 8px;
+  }
+
+  .exclusive-perk {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
+    max-width: 260px;
+  }
+
+  .tbl-head,
+  .tbl-row {
+    grid-template-columns: 50px 1fr 100px 80px;
+    padding: 10px 12px;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .social-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 700px;
+  }
+
+  .exclusive-panel {
+    padding: 24px 28px;
+  }
+
+  .exclusive-panel-main-title {
+    font-size: 28px;
+  }
+}
+
+/* Smooth scrolling for table overflow */
+.tbl-section::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tbl-section::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.03);
+  border-radius: 2px;
+}
+
+.tbl-section::-webkit-scrollbar-thumb {
+  background: rgba(103,213,35,0.3);
+  border-radius: 2px;
+}
