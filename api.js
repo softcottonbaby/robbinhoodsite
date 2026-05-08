@@ -1,5 +1,3 @@
-
-
 const API_CONFIG = {
   url: '/api/stats',
   cooldown: 5 * 60 * 1000,
@@ -16,6 +14,19 @@ let cache = {
   timestamp: 0,
 };
 
+
+const CURRENT_CYCLE = {
+  from: '2026-05-01',
+  to: '2026-05-17'
+};
+
+// NEXT CYCLE:
+// const CURRENT_CYCLE = {
+//   from: '2026-05-18',
+//   to: '2026-05-31'
+// };
+// 
+
 async function fetchAffiliateStats() {
   const now = Date.now();
 
@@ -26,11 +37,7 @@ async function fetchAffiliateStats() {
 
   try {
     console.log('[API] Fetching data via secure proxy...');
-
-    const today = new Date();
-    const firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
-    const from = firstDay.toISOString().split('T')[0];
-    const to = today.toISOString().split('T')[0];
+    console.log('[API] Cycle:', CURRENT_CYCLE.from, 'to', CURRENT_CYCLE.to);
 
     const response = await fetch(API_CONFIG.url, {
       method: 'POST',
@@ -38,9 +45,8 @@ async function fetchAffiliateStats() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-
-        from: from,
-        to: to,
+        from: CURRENT_CYCLE.from,
+        to: CURRENT_CYCLE.to,
       }),
     });
 
@@ -85,8 +91,11 @@ function processLeaderboardData(apiData) {
 }
 
 function getLeaderboardEndDate() {
-  const now = new Date();
-  return new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+  // Cycle 1 ends: May 17, 2026 at 23:59:59
+  return new Date(2026, 4, 17, 23, 59, 59);
+  
+  // NEXT CYCLE: May 31, 2026 at 23:59:59
+  // return new Date(2026, 4, 31, 23, 59, 59);
 }
 
 function getTimeRemaining() {

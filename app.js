@@ -1,5 +1,3 @@
-
-
 function switchView(viewId) {
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('on'));

@@ -4,6 +4,20 @@ let cachedData = null;
 let lastFetchTime = 0;
 const COOLDOWN_MS = 5 * 60 * 1000;
 
+
+// Cycle 1: May 1 - May 17, 2026 (ACTIVE)
+const CURRENT_CYCLE = {
+  from: '2026-05-01',
+  to: '2026-05-17'
+};
+
+// NEXT CYCLE: 
+// const CURRENT_CYCLE = {
+//   from: '2026-05-18',
+//   to: '2026-05-31'
+// };
+// 
+
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -29,6 +43,8 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'Missing API Key' });
     }
 
+    console.log('[Serverless] Fetching cycle:', CURRENT_CYCLE.from, 'to', CURRENT_CYCLE.to);
+
     const response = await fetch(HYPEBET_API_URL, {
       method: 'POST',
       headers: {
@@ -38,8 +54,8 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         apiKey: process.env.HYPEBET_API_KEY,
-        from: req.body.from,
-        to: req.body.to,
+        from: CURRENT_CYCLE.from,
+        to: CURRENT_CYCLE.to,
       }),
     });
 
