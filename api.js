@@ -15,17 +15,11 @@ let cache = {
 };
 
 
+// CURRENT CYCLE: May 18 - May 31, 2026
 const CURRENT_CYCLE = {
-  from: '2026-05-01',
-  to: '2026-05-17'
+  from: '2026-05-18',
+  to: '2026-05-31'
 };
-
-// NEXT CYCLE:
-// const CURRENT_CYCLE = {
-//   from: '2026-05-18',
-//   to: '2026-05-31'
-// };
-// 
 
 async function fetchAffiliateStats() {
   const now = Date.now();
@@ -91,11 +85,8 @@ function processLeaderboardData(apiData) {
 }
 
 function getLeaderboardEndDate() {
-  // Cycle 1 ends: May 17, 2026 at 23:59:59
-  return new Date(2026, 4, 17, 23, 59, 59);
-  
-  // NEXT CYCLE: May 31, 2026 at 23:59:59
-  // return new Date(2026, 4, 31, 23, 59, 59);
+  // Cycle ends: May 31, 2026 at 23:59:59
+  return new Date(2026, 4, 31, 23, 59, 59);
 }
 
 function getTimeRemaining() {
